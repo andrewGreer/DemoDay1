@@ -11,14 +11,15 @@ const sqs = new AWS.SQS({apiVersion: '2012-11-05'});
 
 // Aurora connection configuration
 const dbConfig = {
-  host: 'your-aurora-cluster-endpoint',
-  user: 'your-username',
-  password: 'your-password',
-  database: 'your-database-name',
+  host: ‘greer-demo-1-database-1.cluster-cor4ewwyi3ds.us-east-1.rds.amazonaws.com’,
+  user: ‘admin’,
+  password: ‘demopassword!’,
+  database: ‘greer-demo-1-database-1’,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
 };
+
 
 // Create a connection pool
 const pool = mysql.createPool(dbConfig);
